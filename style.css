@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent; 
+}
+
+body {
+    background: radial-gradient(circle at top, #af0b0b 0%, #4a0000 100%) fixed;
+    color: #ffffff;
+    min-height: 100vh;
+    padding-top: 70px; 
+}
+
+.bg-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50vw;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.02);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* --- MOBILE APP HEADER --- */
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(74, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 100;
+}
+
+.brand h1 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.brand p {
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 2px;
+}
+
+.badge {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* --- MOBILE CONTAINER & GLASS CARD --- */
+.mobile-container {
+    padding: 15px;
+    padding-bottom: 40px; 
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.04); 
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 25px 15px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.custom-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Makes it a perfect circle */
+    object-fit: cover;  /* Ensures the logo doesn't stretch */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); /* Keeps the glowing gold shadow */
+    border: 2px solid #ffc107; /* Keeps the gold border */
+    background-color: #fff; /* White background just in case your logo is transparent */
+}
+
+.main-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #2ecc71;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.subtitle .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #2ecc71;
+}
+
+/* --- MENU ITEMS --- */
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-title {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    color: #ffc107;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 10px;
+    transition: background 0.2s;
+}
+
+.menu-item:active {
+    background: rgba(255, 255, 255, 0.15); 
+}
+
+.item-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.item-details {
+    flex-grow: 1;
+    text-align: left;
+    padding: 0 12px;
+}
+
+.item-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.item-title span {
+    font-size: 0.75rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.item-desc {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.2;
+}
+
+.item-price {
+    font-size: 1rem;
+    font-weight: 800;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
+/* --- SOCIAL MEDIA LINKS --- */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+    padding: 12px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+/* WhatsApp Styling */
+.social-btn.whatsapp {
+    background: rgba(37, 211, 102, 0.2);
+    border: 1px solid rgba(37, 211, 102, 0.4);
+}
+.social-btn.whatsapp i {
+    color: #25D366;
+    font-size: 1.2rem;
+}
+
+/* Instagram Styling */
+.social-btn.instagram {
+    background: rgba(225, 48, 108, 0.2);
+    border: 1px solid rgba(225, 48, 108, 0.4);
+}
+.social-btn.instagram i {
+    color: #E1306C;
+    font-size: 1.2rem;
+}
+
+.social-btn:active {
+    transform: scale(0.96);
+}
+
+/* --- FOOTER & GITHUB LINK --- */
+.bottom-footer {
+    margin-top: 35px;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.dev-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dev-link i {
+    font-size: 0.9rem;
+}
+
+.dev-link:active {
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+}
